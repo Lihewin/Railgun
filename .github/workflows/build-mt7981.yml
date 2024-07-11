@@ -90,7 +90,7 @@ jobs:
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files immortalwrt-mt798x/files
-        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE immortalwrt-mt798x/.config
+        [ -e $CONFIG_FILE ] && mv immortalwrt-mt798x/defconfig/mt7981-ax3000.config immortalwrt-mt798x/.config
         chmod +x $DIY_P2_SH
         cd immortalwrt-mt798x
         $GITHUB_WORKSPACE/$DIY_P2_SH
